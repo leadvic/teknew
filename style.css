@@ -1,22 +1,30 @@
+/* Este primer atributo rige todos los elemtnos centrales */
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat Alternates', sans-serif;    
 }
+
+/* Este elemento rige el cuerpo de la página */
 
 body{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(fondo.jpg);
     height: 100vh;
     background-size: cover;
+    background-repeat: no-repeat;
 }
+
+/* Estos elementos rigen la barra de búsqueda */
 
 .buscar{
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: 50%;
-    top: 17%;
+    left: 40%;
+    top: 5%;
     transform: translate(-50%,-50%);
     background: rgb(16, 102, 40);
     padding: 10px;
@@ -24,6 +32,7 @@ body{
     border-radius: 15px;
 }
 
+/* Estos rigen los elementos interiores de la barra de búsqueda */
 .buscar_texto{
     border: none;
     background: none;
@@ -37,6 +46,7 @@ body{
 
 
 }
+/* Estos rigen el ícono en forma de lupa */
 .boton{
     width: 24px;
     height: 24px;
@@ -47,11 +57,15 @@ body{
 
 /* =?=====Responsive====== */
 
+/* Este primer grupo rige los elementos para celulares */
+
 @media screen and (min-width:450px){
     .buscar:hover > .buscar_texto{
         width: 190px;
     }
 }
+
+/* Este rige los elementos para tablets */
 
 @media screen and (min-width:768px){
     .buscar:hover > .buscar_texto{
@@ -59,8 +73,10 @@ body{
     }
 }
 
+/* Estos rigen los elementos para PCs */
+
 @media screen and (min-width:1024px){
-    .buscar:hover > .buscar_texto{
+    .buscar:hover > .buscar_texto.buscar_texto{
         width: 500px;
     }
 }

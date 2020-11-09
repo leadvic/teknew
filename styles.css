@@ -38,6 +38,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-buscar:before {
+.icon-menu:before {
   content: "\61";
+}
+.icon-buscar:before {
+  content: "\62";
+}
+.icon-equis:before {
+  content: "\63";
 }

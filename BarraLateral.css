@@ -1,0 +1,138 @@
+.header{
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0; left: 0;
+}
+
+.container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+.container .btn-menu, .logo{
+    float: left;
+    line-height: 70px;
+    cursor: pointer;
+    
+}
+
+.container .btn-menu, .logo a {
+    text-decoration: none;
+}
+
+.container .btn-menu label{
+    color: #fff;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+.logo h1{
+    color: #fff;
+    font-weight: 9999;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.container .menu{
+    float: right;
+    line-height: 70px;
+}
+.container .menu a{
+    display: inline-block;
+    padding: 15px 10px;
+    line-height: normal;
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+    font-size: 15px;
+}
+
+.container .menu a:hover{
+    border-bottom: 3px solid rgb(16, 102, 40);
+    padding: 8px 11px;
+}
+
+/* Menú laterla */
+#btn-menu{
+    display: none;
+}
+
+.container-menu{
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0; left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#btn-menu:checked ~ .container-menu{
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu{
+    width: 100%;
+    max-width: 250px;
+    background:rgb(16, 102, 40);
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    }
+
+.cont-menu nav{
+    transform: translateY(15%)
+
+}
+
+.cont-menu nav a{
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+
+}
+
+.cont-menu nav a:hover{
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+    
+}
+
+.cont-menu label{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+/* Este primer grupo rige los elementos para celulares */
+
+@media screen and (min-width:350px){
+    .buscar:hover > .btn-menu{
+        width: 190px;
+    }
+}
+
+/* Este rige los elementos para tablets */
+
+@media screen and (min-width:768px){
+    .buscar:hover > .btn-menu{
+        width: 300px;
+    }btn-menu
+}
+
+/* Estos rigen los elementos para PCs */
+
+@media screen and (min-width:1024px){
+    .buscar:hover > .btn-menu{
+        width: 500px;
+    }
+}
