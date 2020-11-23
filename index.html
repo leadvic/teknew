@@ -5,54 +5,50 @@
   <title>TekNew</title>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="CSS/barraDeBusqueda.css">
-  <link rel="stylesheet" href="CSS/main.css">
+  <link rel="stylesheet" href="CSS/GridLayout.css">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 
 <body>
-  <!--Código elementos superiores derecho  -->
-  <header class="header">
-    <div class="container">
-    <div class="btn-menu">
-      <label for="btn-menu" class="icon-menu"></label>
-    </div>
-      <div class="logo">
-        <a href=index.html><h1>TekNew</h1></a>
-      </div>
-      <nav class="menu">
-          <a href="index.html">Inicio</a>
-          <a href="nosotros.html">Nosotros</a>
-          <a href="productos.html">Productos</a>
-          <a href="contacto.html">Contacto</a>
-      </nav>
-    </div>
-  </header>
-      <!-- Código de la caja izquierda -->
-<input type="checkbox" id="btn-menu">
-<div class="container-menu">
-      <div class="cont-menu">
-        <nav>
-            <a href="#">Audio</a>
-            <a href="#">Perifericos</a>
-            <a href="#">Producto 3</a>
-            <a href="#">Producto 4</a>
-            <a href="#">Producto 5</a>
-            <a href="#">Producto 6</a>
-        </nav>
-  <label for="btn-menu" class="icon-equis"></label>
-      </div>
-</div>
+    <!--Logo "TekNew"  -->
+    <div class="logo"> 
+      <a href=index.html><h1>TekNew</h1></a>
+    </div>  
+  <!-- Barra de opciones superior -->
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="productos.html">Productos</a>
+      <a href="contacto.html">Contacto</a>
+    </nav>  
+  
 
-<!-- El código de la barra de navegación -->
-    <div class="buscar">
-      <input type="text" class="buscar_texto" placeholder="Buscar">
-      <a href="" class="boton">
-        <i class="icon-buscar" ></i>
-      </a>
-    </div>
-  <footer>
-    
-
+  <!-- Código de la caja izquierda -->
+  <aside id="column-left" class="column_left">
+    <ul>
+      <li><a href="#">Audio</a></li>
+      <li><a href="#">Perifericos</a></li>
+      <li><a href="#">Producto 3</a></li>
+      <li><a href="#">Producto 4</a></li>
+      <li><a href="#">Producto 5</a></li>
+      <li><a href="#">Producto 6</a></li>
+    </ul>  
+  </aside>
+<!-- El banner central -->
+  <main>
+    <h1>Main, maldito main!</h1>
+      <p>¡Tenemos este increíble producto con una espectacular oferta!</p>
+  </main>
+<!-- la barra de navegación -->
+  <div class="search">
+    <input type="text" class="buscar_texto" placeholder="Buscar">
+    <a href="#" class="boton"><i class="icon-buscar" ></i></a>
+  </div>
+<!-- RRSS y derechos reservados -->
+  <footer class="footer">
+    <p><a href="#">RRSS</a></p>
+    <p><a href="#">Derechos reservados</a></p>
+    <p><a href="#">Contáctanos</a></p>
   </footer>
 
 </body>

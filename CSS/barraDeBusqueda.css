@@ -1,6 +1,6 @@
 /* Estos elementos rigen la barra de búsqueda */
 
-.buscar{
+.search{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
 }
 
 /* Estos rigen los elementos interiores de la barra de búsqueda */
-.buscar_texto{
+.search .buscar_texto{
     border: none;
     background: none;
     outline: none;

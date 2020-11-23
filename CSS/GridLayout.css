@@ -1,0 +1,276 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap');
+
+html{
+  height: 100%;
+  
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    -webkit-tap-highlight-color: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+  }
+  
+  @font-face {
+    font-family: "untitled-font-2";
+    src:url("../fonts/untitled-font-2.eot");
+    src:url("../fonts/untitled-font-2.eot") format("embedded-opentype"),
+      url("../fonts/untitled-font-2.woff") format("woff"),
+      url("../fonts/untitled-font-2.ttf") format("truetype"),
+      url("../fonts/untitled-font-2.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  [data-icon]:before {
+    font-family: "untitled-font-2" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    font-family: "untitled-font-2" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-menu:before {
+    content: "\61";
+  }
+  .icon-buscar:before {
+    content: "\62";
+  }
+  .icon-equis:before {
+    content: "\63";
+  }
+  :root{
+    --main-radius:10px;
+    --main-padding:10px;
+    --main-color: #ffff;
+    --main-margin-left: 28%;
+  }
+
+  body {
+    display: grid;
+    height: 100%;
+    margin: 5px;
+    grid-template-columns: 0.2fr 0.4fr 1fr 2fr;
+    grid-template-rows: 0.2fr 3fr 1fr;
+    grid-template-areas:
+        "margin logo search nav"
+        "margin aside main main"
+        "footer footer footer footer";
+    grid-gap: 5px;
+    text-align: center;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../img/background.png"); 
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+
+/* Header */
+
+.logo {
+    grid-area: logo; 
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    padding: var(--main-padding);
+    
+    background-color: rgba(0,0,0,0.5);
+}
+
+.logo a{
+  
+}
+.logo h1{
+  color: var(--main-color);
+  font-weight: 100%;
+  cursor: pointer;
+}
+
+.search{
+  grid-area: search;
+  display: grid;
+  background-color: rgba(0,0,0,0.5);
+  /* padding: 5px;
+   border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background: var(--main-background);
+    border-radius: 10px; */
+    /* align-items: center;
+    padding: var(--main-padding); */
+/* Barra de opciones superior */
+ }
+
+ .search a{
+   color: rgb(16, 102, 40);
+ }
+
+ .nav{
+   grid-area: nav; 
+   display: grid;
+   border-radius: var(--main-radius);
+   padding-top: var(--main-padding);
+   padding: 5px;
+   border-radius: 10px;
+   text-decoration: none;
+   align-items: right;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   padding: var(--main-padding);
+   outline-style: none;
+   text-decoration: none;
+   background-color: rgba(0,0,0,0.5);
+}
+
+.nav a{
+  display: inline-block;
+  text-decoration: none;
+  padding: 15px 10px;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  color: var(--main-color);
+}
+
+nav a:hover{
+  border-bottom: 3px solid rgb(16, 102, 40);
+  
+  text-decoration: none;
+  padding: 8px 11px;
+  transition: 0.1s;
+  color:#ffff;
+  cursor: pointer;
+}
+/* Caja izquierda */
+aside{
+  grid-area: aside;
+  display: grid;
+  text-decoration: none;
+  color: var(--main-color);
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  border-radius: 10px;
+  align-items: center;
+  padding: var(--main-padding);
+  grid-template-rows: 45%;
+  background-color: rgba(0,0,0,0.5);
+  
+}
+
+aside ul{
+  list-style: none;
+  padding: left;
+  text-align: justify;
+  
+}
+
+aside ul li{
+  margin-top: 20px;
+  
+}
+
+aside li:hover{
+  border-bottom: 3px solid rgb(16, 102, 40);
+  text-decoration: none;
+  padding: 8px 11px;
+  transition: 0.1s;
+  color:#ffff;
+  cursor: pointer;
+}
+
+aside a{
+  color: var(--main-color);
+}
+
+/* Barra de navegación */
+
+.search {
+  grid-area: search;
+  border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    background: var(--main-background);
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    padding: var(--main-padding);
+    background-color: rgba(0,0,0,0.5);
+}
+
+.search .botton{
+  background-color: none;
+}
+/* Elementos centrales o main */
+main{
+  grid-area: main;
+  border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+    color: var(--main-color);
+    border-radius: 10px;
+    display: grid;
+    align-items: center;
+    padding: var(--main-padding);
+    background-color: rgba(0,0,0,0.5);
+    
+}
+
+main:hover {
+  border-bottom: 3px solid rgb(16, 102, 40);
+  text-decoration: none;
+  padding: 8px 11px;
+  transition: 0.1s;
+  color:#ffff;
+    
+}
+/* footer */
+
+footer{
+  grid-area: footer;
+  border-radius: var(--main-radius);
+  padding-top: var(--main-padding);
+  color: var(--main-color);
+  grid-template-columns: 1fr 1fr 1fr;
+   border-radius: 10px;
+  display: grid;
+  align-items: center;
+  padding: var(--main-padding);
+  /* background-image: linear-gradient(rgba(14, 14, 14, 0.021), rgba(16, 102, 40, 0.274)) */
+  background-color: rgba(0,0,0,0.5);
+}
+
+footer a{
+  color: var(--main-color);
+}
+
+
+
+footer a:hover{
+  border-bottom: 3px solid rgb(16, 102, 40);
+  text-decoration: none;
+  padding: 8px 11px;
+  transition: 0.1s;
+  color:#ffff;
+  cursor: pointer;
+}

@@ -130,6 +130,7 @@ body{
 .container .menu a:hover{
     border-bottom: 3px solid rgb(16, 102, 40);
     padding: 8px 11px;
+    transition: 0.1s;
 }
 
 /* Menú laterla */
