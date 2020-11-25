@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Lato', sans-serif;
+  text-decoration: none;
+}
+
+html{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  grid-template-rows: 0.4fr 1.5fr 2fr 1fr;
+  grid-template-areas:
+    "header"
+    "main"
+    "featured"
+    "footer";
+
+  height: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-image: url("../img/background.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+header{
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+  grid-template-areas:
+    "logo nave";
+}
+
+header .logo{
+  grid-area: logo;
+  background-color: rgba(255, 0, 0);
+}
+
+header .nave{
+  grid-area: nave;
+  background-color: rgba(0, 255, 0);
+}
+
+main{
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  grid-template-areas:
+    "aside banner";
+}
+
+main .aside{
+  grid-area: aside;
+  background-color: rgba(0, 0, 255);
+}
+
+main .banner{
+  grid-area: banner;
+  background-color: rgba(0, 255, 255);
+}
+
+.featured{
+  grid-area: featured;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "f11 f12 f13"
+    "f21 f22 f23"
+    "f31 f32 f33";
+
+  background-color: rgba(255, 0, 255);
+}
+
+footer{
+  grid-area: footer;
+  background-color: rgba(255, 255, 0);
+}
